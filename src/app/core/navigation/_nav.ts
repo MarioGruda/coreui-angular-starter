@@ -9,6 +9,10 @@ export const navigation = [
     }
   },
   {
+    title: true,
+    name: 'APP_NAME'
+  },
+  {
     name: 'About',
     url: '/about',
     icon: 'fa fa-info-circle'

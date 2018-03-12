@@ -7,7 +7,13 @@ import { Route } from '../core';
 const routes: Routes = [
   Route.withShell([
     { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
-    { path: 'dashboard', component: DashboardComponent }
+    {
+      path: 'dashboard',
+      component: DashboardComponent,
+      data: {
+        title: 'Dashboard'
+      }
+    }
   ])
 ];
 

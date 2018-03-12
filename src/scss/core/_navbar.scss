@@ -75,10 +75,6 @@
     padding-bottom: 0;
     line-height: $line-height-base;
   }
-
-  .dropdown-item {
-    min-width: 180px;
-  }
 }
 
 .navbar-brand {
@@ -109,7 +105,7 @@
 }
 
 .navbar-divider {
-  background-color: rgba(0,0,0,.075);
+  background-color: rgba(0, 0, 0, 0.075);
 }
 
 @include media-breakpoint-up(lg) {

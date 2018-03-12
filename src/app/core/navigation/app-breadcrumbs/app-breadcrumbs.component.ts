@@ -16,14 +16,11 @@ import 'rxjs/add/operator/filter';
 })
 export class AppBreadcrumbsComponent {
   breadcrumbs: Array<Object>;
-  constructor(
-    private router: Router,
-    private route: ActivatedRoute
-  ) {
-    this.router.events.filter(event => event instanceof NavigationEnd).subscribe((event) => {
+  constructor(private router: Router, private route: ActivatedRoute) {
+    this.router.events.filter(event => event instanceof NavigationEnd).subscribe(event => {
       this.breadcrumbs = [];
-      let currentRoute = this.route.root,
-      url = '';
+      let currentRoute = this.route.root;
+      let url = '';
       do {
         const childrenRoutes = currentRoute.children;
         currentRoute = null;
@@ -34,7 +31,7 @@ export class AppBreadcrumbsComponent {
             url += '/' + routeSnapshot.url.map(segment => segment.path).join('/');
             this.breadcrumbs.push({
               label: route.snapshot.data,
-              url:   url
+              url: url
             });
             currentRoute = route;
           }
