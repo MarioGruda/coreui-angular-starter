@@ -5,6 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './app-aside.component.html'
 })
 export class AppAsideComponent {
-
-  constructor() { }
+  constructor() {}
 }

@@ -5,7 +5,5 @@ import { Router } from '@angular/router';
   templateUrl: 'dashboard.component.html'
 })
 export class DashboardComponent {
-
-  constructor( ) { }
-
+  constructor() {}
 }

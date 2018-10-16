@@ -53,7 +53,8 @@ import { Router } from '@angular/router';
     `
 })
 export class AppSidebarNavItemComponent {
-  @Input() item: any;
+  @Input()
+  item: any;
 
   public hasClass() {
     return this.item.class ? true : false;
@@ -95,7 +96,8 @@ export class AppSidebarNavItemComponent {
   `
 })
 export class AppSidebarNavLinkComponent {
-  @Input() link: any;
+  @Input()
+  link: any;
 
   public hasVariant() {
     return this.link.variant ? true : false;
@@ -132,7 +134,8 @@ export class AppSidebarNavLinkComponent {
   `
 })
 export class AppSidebarNavDropdownComponent {
-  @Input() link: any;
+  @Input()
+  link: any;
 
   public isBadge() {
     return this.link.badge ? true : false;
@@ -150,7 +153,8 @@ export class AppSidebarNavDropdownComponent {
   template: ''
 })
 export class AppSidebarNavTitleComponent implements OnInit {
-  @Input() title: any;
+  @Input()
+  title: any;
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
