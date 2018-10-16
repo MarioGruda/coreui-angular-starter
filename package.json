@@ -9,10 +9,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "npm run format:check && npm run lint && ng build --prod",
     "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "cypress open"
+    "e2e": "cypress open",
+    "lint:check": "ng lint coreui-angular-starter",
+    "lint:fix": "npm run lint:check --fix",
+    "format:base": "prettier \"{src,cypress}/**/*{.ts,.js,.json}\"",
+    "format:check": "npm run format:base -- --list-different",
+    "format:fix": "npm run format:base -- --write"
   },
   "private": true,
   "dependencies": {
