@@ -1,5 +1,5 @@
 describe('Login', () => {
-  before(() => {
+  beforeEach(() => {
     cy.visit('/login');
   });
 
@@ -27,6 +27,8 @@ describe('Login', () => {
     });
 
     it('successful login should redirect to dashboard', () => {
+      cy.get('[data-cy=username-input]').type('username');
+      cy.get('[data-cy=password-input]').type('password');
       cy.get('[data-cy=login-button]').click();
 
       cy.url().should('include', '/dashboard');
