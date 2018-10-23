@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { RouterModule, RouteReuseStrategy } from '@angular/router';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 // Import components
 import {
   AppAsideComponent,
@@ -49,7 +51,7 @@ import { RouteReusableStrategy } from './route-reusable-strategy';
 import { AuthenticationService, AuthenticationGuard } from './authentication';
 
 @NgModule({
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, NgbModule],
   declarations: [ShellComponent, ...APP_COMPONENTS, ...APP_DIRECTIVES],
   exports: [],
   providers: [
