@@ -9,7 +9,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "npm run format:check && npm run lint && ng build --prod",
+    "build": "npm run format:check && npm run lint:check && ng build --prod",
     "test": "ng test",
     "e2e": "cypress open",
     "lint:check": "ng lint coreui-angular-starter",
