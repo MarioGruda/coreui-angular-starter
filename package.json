@@ -9,9 +9,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:ci": "serve ./dist/ --single -p 4200",
     "build": "npm run format:check && npm run lint:check && ng build --prod",
+    "build:ci": "ng build --prod",
     "test": "ng test",
+    "test:ci": "ng test --watch=false",
+    "cypress:run": "cypress run",
     "e2e": "cypress open",
+    "e2e:ci": "ng build --prod && run-p --race start:ci cypress:run",
     "lint:check": "ng lint coreui-angular-starter",
     "lint:fix": "npm run lint:check --fix",
     "format:base": "prettier \"{src,cypress}/**/*{.ts,.js,.json}\"",
@@ -60,7 +65,9 @@
     "tslib": "^1.9.3",
     "tslint": "5.11.0",
     "tslint-config-prettier": "1.15.0",
-    "typescript": "3.1.3"
+    "typescript": "3.1.3",
+    "npm-run-all": "4.1.3",
+    "serve": "10.1.1"
   },
   "engines": {
     "node": ">= 8.9.4",

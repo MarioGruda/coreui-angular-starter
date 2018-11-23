@@ -1,0 +1,29 @@
+language: node_js
+node_js:
+  - '10'
+
+dist: trusty
+
+sudo: required
+
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+    - ~/.cache
+
+install:
+  - npm ci
+
+addons:
+  chrome: stable
+
+branches:
+  only:
+    - master
+
+script:
+  - npm run lint:check
+  - npm run format:check
+  - npm run test:ci
+  - npm run e2e:ci
